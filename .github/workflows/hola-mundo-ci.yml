@@ -3,11 +3,27 @@ name: Hola mundo
 on: [push]
 
 jobs:
-  build:
+
+  hello-world:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Hola mundo
+      run: echo 'Hola mundo'
+
+  write-file:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Write to file
+      run: echo 'Hello, world!' > hello.txt
+    - name: Display file
+      run: cat hello.txt
+
+  list-files:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-
-    - name: Hola mundo
-      run: echo 'Hola mundo'
+    - name: List files
+      run: ls -a
