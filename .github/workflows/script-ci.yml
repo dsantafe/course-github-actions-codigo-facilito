@@ -1,0 +1,15 @@
+name: Script CI
+'on':
+  push:
+    branches:
+      - main
+jobs:
+  script-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository code
+        uses: actions/checkout@v3
+      - name: Run script
+        run: >-
+          chmod +x scripts/script.sh
+          scripts/script.sh
