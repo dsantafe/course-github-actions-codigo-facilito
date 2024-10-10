@@ -12,4 +12,4 @@ jobs:
       - name: Run script
         run: >-
           chmod +x scripts/script.sh
-          scripts/script.sh
+          ./scripts/script.sh
