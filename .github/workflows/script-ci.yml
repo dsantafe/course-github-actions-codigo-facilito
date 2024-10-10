@@ -12,7 +12,7 @@ jobs:
       - name: Verify script presence
         run: ls -la scripts/
       - name: Run script
-        run: >-
+        run: |
           chmod +x scripts/script.sh
           echo "Running script.sh..."
           ./scripts/script.sh
