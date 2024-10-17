@@ -1,0 +1,16 @@
+name: "Local Action 1"
+description: "This is a Local Action 1"
+inputs:
+  message:
+    description: "A message to display"
+    required: true
+    default: "Default Value"
+runs:
+  using: "composite" # group multiple jobs together
+  steps:
+    - name: "Step 1"
+      run: echo "Hello from Local Action ${{ inputs.message }}"
+      shell: bash
+    - name: "Step 2"
+      run: echo "Goodbye from Local Action ${{ inputs.message }}"
+      shell: bash

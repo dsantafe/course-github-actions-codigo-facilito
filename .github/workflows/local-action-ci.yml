@@ -10,4 +10,6 @@ jobs:
       - name: Check out the repository code
         uses: actions/checkout@v3
       - name: Run local action
-        uses: ./.github/actions/local-action-1
+        uses: ./.github/actions/local-action
+        with:
+          message: "${{ github.actor }}"
